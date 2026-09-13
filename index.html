@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0a0a0a">
+<title>Fraser Heritage Holdings | Private Family Office · Preserving Legacy, Building Generational Wealth</title>
+<meta name="description" content="Fraser Heritage Holdings is a private family office dedicated to the stewardship of capital, the preservation of heritage and the creation of enduring value across generations. Investment advisory, alternative asset allocation, wealth structuring, family governance and co-investment from Aberdeen, New York, Singapore, Dubai and Johannesburg.">
+<meta name="author" content="Fraser Heritage Holdings">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Fraser Heritage Holdings | Private Family Office">
+<meta property="og:description" content="Preserving Legacy. Building Generational Wealth. A private family office dedicated to the stewardship of capital across generations.">
+<meta property="og:image" content="./assets/crest.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        primary:   {DEFAULT:'#c9a961', 50:'#fbf7ec', 100:'#f4ead0', 200:'#ead6a3', 300:'#dfc077', 400:'#d4b06a', 500:'#c9a961', 600:'#b08f44', 700:'#8c7136', 800:'#67532a', 900:'#43361c'},
+        secondary: {DEFAULT:'#f5f0e6', 50:'#fdfcf9', 100:'#faf7f1', 200:'#f5f0e6', 300:'#e9e1d1', 400:'#d9cdb6', 500:'#c4b496', 600:'#a89777', 700:'#87785c', 800:'#655a45', 900:'#443c2e'},
+        gold:  {DEFAULT:'#e8c547', soft:'#c9a961', deep:'#8c7136'},
+        ink:   {DEFAULT:'#0a0a0a', 900:'#0a0a0a', 800:'#111111', 700:'#161616', 600:'#1e1e1e', 500:'#262626'},
+        cream: {DEFAULT:'#f5f0e6', dark:'#e9e1d1'},
+        stone: {DEFAULT:'#8a8073', light:'#a89f92', dark:'#5c5448'}
+      },
+      fontFamily: {
+        serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+        sans:  ['Inter', 'system-ui', 'sans-serif']
+      }
+    }
+  }
+}
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { background:#0a0a0a; color:#f5f0e6; font-family:'Inter',system-ui,sans-serif; font-weight:300; -webkit-font-smoothing:antialiased; }
+  h1,h2,h3,h4,.serif { font-family:'Cormorant Garamond',Georgia,serif; }
+  ::selection { background:#c9a961; color:#0a0a0a; }
+
+  /* Entrance animations */
+  @keyframes fadeUp { from { opacity:0; transform:translateY(40px) } to { opacity:1; transform:translateY(0) } }
+  @keyframes fadeIn { from { opacity:0 } to { opacity:1 } }
+  @keyframes crestGlow { 0%,100% { filter:drop-shadow(0 0 18px rgba(232,197,71,.18)) } 50% { filter:drop-shadow(0 0 34px rgba(232,197,71,.38)) } }
+  @keyframes scrollPulse { 0% { transform:scaleY(0); transform-origin:top } 50% { transform:scaleY(1); transform-origin:top } 51% { transform-origin:bottom } 100% { transform:scaleY(0); transform-origin:bottom } }
+  .fade-up { animation: fadeUp .9s cubic-bezier(.22,1,.36,1) both }
+  .fade-in { animation: fadeIn 1.4s ease both }
+  .d1 { animation-delay:.1s } .d2 { animation-delay:.25s } .d3 { animation-delay:.4s } .d4 { animation-delay:.55s } .d5 { animation-delay:.7s } .d6 { animation-delay:.85s }
+  .reveal { opacity:0; transform:translateY(36px); transition: opacity .9s cubic-bezier(.22,1,.36,1), transform .9s cubic-bezier(.22,1,.36,1); }
+  .reveal.in { opacity:1; transform:none; }
+  .reveal-delay-1 { transition-delay:.12s } .reveal-delay-2 { transition-delay:.24s } .reveal-delay-3 { transition-delay:.36s } .reveal-delay-4 { transition-delay:.48s }
+
+  /* Hero */
+  html, body { overflow-x: clip; }
+  .hero-bg { background-image:url('./assets/estate.jpg'); background-size:cover; background-position:center 40%; background-attachment:fixed; }
+  @media (max-width:768px){ .hero-bg { background-attachment:scroll; } }
+  .hero-overlay { background: radial-gradient(ellipse at center 30%, rgba(10,10,10,.72) 0%, rgba(10,10,10,.9) 55%, rgba(10,10,10,.98) 100%); }
+  .hero-grid { background-image: linear-gradient(rgba(201,169,97,.06) 1px, transparent 1px), linear-gradient(90deg, rgba(201,169,97,.06) 1px, transparent 1px); background-size:96px 96px; mask-image: radial-gradient(ellipse at center, #000 30%, transparent 75%); -webkit-mask-image: radial-gradient(ellipse at center, #000 30%, transparent 75%); }
+  .hero-fade { background: linear-gradient(to bottom, rgba(10,10,10,0), #0a0a0a); }
+  .crest-glow { animation: crestGlow 6s ease-in-out infinite; }
+  @media (max-height: 980px) { .scroll-cue { display:none; } }
+  .scroll-line { width:1px; height:56px; background:linear-gradient(to bottom, #c9a961, transparent); animation: scrollPulse 2.4s ease-in-out infinite; }
+
+  /* Glass */
+  .glass { background: rgba(245,240,230,.05); border:1px solid rgba(201,169,97,.22); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+
+  /* Nav */
+  #main-nav { transition: background .45s ease, box-shadow .45s ease, padding .45s ease, border-color .45s ease; background: rgba(10,10,10,.35); border-bottom:1px solid transparent; }
+  #main-nav.scrolled { background: rgba(10,10,10,.92); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom-color: rgba(201,169,97,.16); box-shadow: 0 10px 40px rgba(0,0,0,.45); }
+  .nav-link { color:#f5f0e6; font-family:'Cormorant Garamond',serif; font-weight:500; letter-spacing:.22em; text-transform:uppercase; font-size:.82rem; position:relative; padding:.35rem 0; transition:color .3s; }
+  .nav-link::after { content:''; position:absolute; left:0; bottom:0; height:1px; width:0; background:#e8c547; transition:width .35s cubic-bezier(.22,1,.36,1); }
+  .nav-link:hover { color:#e8c547; } .nav-link:hover::after { width:100%; }
+
+  /* Buttons */
+  .btn-primary { background:linear-gradient(135deg,#e8c547,#c9a961); color:#0a0a0a; font-weight:600; letter-spacing:.2em; text-transform:uppercase; font-size:.74rem; padding:1rem 2.2rem; display:inline-flex; align-items:center; gap:.7rem; box-shadow:0 4px 20px rgba(232,197,71,.28); transition:transform .3s cubic-bezier(.22,1,.36,1), box-shadow .3s; }
+  .btn-primary:hover { transform:translateY(-2px); box-shadow:0 8px 32px rgba(232,197,71,.42); }
+  .btn-outline { border:1px solid rgba(232,197,71,.55); color:#e8c547; letter-spacing:.2em; text-transform:uppercase; font-size:.74rem; font-weight:500; padding:1rem 2.2rem; display:inline-flex; align-items:center; gap:.7rem; backdrop-filter:blur(6px); transition:all .3s cubic-bezier(.22,1,.36,1); }
+  .btn-outline:hover { transform:translateY(-2px); background:rgba(232,197,71,.08); border-color:#e8c547; }
+  .btn-outline-dark { border:1px solid rgba(10,10,10,.5); color:#0a0a0a; letter-spacing:.2em; text-transform:uppercase; font-size:.74rem; font-weight:500; padding:1rem 2.2rem; display:inline-flex; align-items:center; gap:.7rem; transition:all .3s; }
+  .btn-outline-dark:hover { transform:translateY(-2px); background:#0a0a0a; color:#e8c547; }
+
+  /* Section furniture */
+  .section-badge { display:inline-flex; align-items:center; gap:.6rem; background:linear-gradient(135deg, rgba(232,197,71,.14), rgba(201,169,97,.06)); border:1px solid rgba(201,169,97,.28); color:#e8c547; font-size:.72rem; font-weight:500; letter-spacing:.28em; text-transform:uppercase; padding:.45rem 1.1rem; border-radius:50px; font-family:'Inter',sans-serif; }
+  .section-badge.on-cream { background:linear-gradient(135deg, rgba(10,10,10,.06), rgba(10,10,10,.02)); border-color:rgba(10,10,10,.18); color:#8c7136; }
+  .accent-divider { width:48px; height:2px; background:linear-gradient(90deg,#e8c547,#c9a961 60%, transparent); border-radius:4px; }
+  .accent-divider.on-cream { background:linear-gradient(90deg,#8c7136,#c9a961 60%, transparent); }
+  .eyebrow { font-family:'Cormorant Garamond',serif; font-style:italic; color:#c9a961; letter-spacing:.3em; font-size:1rem; }
+  .rule-gold { height:1px; background:linear-gradient(90deg, transparent, rgba(201,169,97,.5), transparent); }
+
+  /* Cards */
+  .card { background:linear-gradient(160deg,#141414,#0f0f0f); border:1px solid rgba(201,169,97,.14); transition:transform .45s cubic-bezier(.22,1,.36,1), border-color .45s, box-shadow .45s; position:relative; overflow:hidden; }
+  .card::before { content:''; position:absolute; inset:0; background:radial-gradient(600px circle at var(--mx,50%) var(--my,0%), rgba(232,197,71,.09), transparent 45%); opacity:0; transition:opacity .5s; pointer-events:none; }
+  .card:hover { transform:translateY(-6px); border-color:rgba(232,197,71,.42); box-shadow:0 24px 60px rgba(0,0,0,.55); }
+  .card:hover::before { opacity:1; }
+  .card .icon { transition:transform .45s cubic-bezier(.22,1,.36,1), background .45s, color .45s; }
+  .card:hover .icon { transform:scale(1.08) rotate(-3deg); background:#e8c547; color:#0a0a0a; }
+  .num { font-family:'Cormorant Garamond',serif; font-size:3.4rem; line-height:1; color:#e8c547; font-weight:500; }
+  .stat-sep { border-left:1px solid rgba(201,169,97,.2); }
+
+  /* Investment tiles on cream */
+  .tile { background:#fbf8f2; border:1px solid rgba(10,10,10,.08); transition:transform .4s cubic-bezier(.22,1,.36,1), box-shadow .4s, border-color .4s; }
+  .tile:hover { transform:translateY(-6px); box-shadow:0 20px 50px rgba(10,10,10,.12); border-color:rgba(140,113,54,.45); }
+  .tile .glyph { color:#8c7136; transition:transform .45s cubic-bezier(.22,1,.36,1), color .45s; }
+  .tile:hover .glyph { transform:scale(1.12) rotate(-4deg); color:#0a0a0a; }
+
+  /* Process */
+  .step-num { font-family:'Cormorant Garamond',serif; font-size:4.5rem; line-height:1; color:rgba(232,197,71,.14); font-weight:600; position:absolute; top:-.6rem; right:1.2rem; }
+
+  /* Forms */
+  .field { width:100%; background:#101010; border:1px solid rgba(201,169,97,.2); color:#f5f0e6; padding:.95rem 1.1rem; font-size:.95rem; outline:none; transition:border-color .3s, box-shadow .3s; border-radius:2px; }
+  .field::placeholder { color:#6b6357; }
+  .field:focus { border-color:#e8c547; box-shadow:0 0 0 3px rgba(232,197,71,.12); }
+  .label { display:block; font-size:.7rem; letter-spacing:.22em; text-transform:uppercase; color:#c9a961; margin-bottom:.5rem; font-weight:500; }
+
+  /* Mobile menu */
+  #mobile-menu { transform:translateX(100%); transition:transform .5s cubic-bezier(.22,1,.36,1); }
+  #mobile-menu.open { transform:translateX(0); }
+  .burger span { display:block; width:26px; height:1.5px; background:#e8c547; transition:all .35s; }
+  .burger.open span:nth-child(1){ transform:translateY(7px) rotate(45deg) } .burger.open span:nth-child(2){ opacity:0 } .burger.open span:nth-child(3){ transform:translateY(-7px) rotate(-45deg) }
+
+  /* Scroll to top */
+  #to-top { opacity:0; pointer-events:none; transform:translateY(10px); transition:all .4s; }
+  #to-top.show { opacity:1; pointer-events:auto; transform:none; }
+
+  .office-dot { width:6px; height:6px; border-radius:50%; background:#e8c547; box-shadow:0 0 0 4px rgba(232,197,71,.15); }
+</style>
+  <link rel="icon" href="./assets/crest-256.png">
+  <link rel="shortcut icon" href="./assets/crest-256.png">
+  <link rel="apple-touch-icon" href="./assets/crest-256.png">
+  </head>
+<body class="bg-ink text-cream overflow-x-hidden">
+<!-- Privacy Gate -->
+<div id="vpc-gate" style="position:fixed;inset:0;z-index:99999;background:#0a0a0a;display:flex;align-items:center;justify-content:center;">
+  <div style="background:#fff;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.3);">
+    <img src="https://vantagepc.co.za/assets/img/VP.png" alt="VPC" style="height:40px;margin:0 auto 16px;">
+    <h2 style="font-family:Sora,sans-serif;font-size:20px;font-weight:700;color:#2f4d5a;margin-bottom:12px;">Private Concept Access</h2>
+    <p style="font-size:13px;color:#64748b;margin-bottom:16px;text-align:left;line-height:1.6;">This website has been created as a private concept to demonstrate how a more modern, conversion-focused online presence could look for your business.</p>
+    <p style="font-size:12px;color:#94a3b8;margin-bottom:16px;text-align:left;line-height:1.6;">It is not affiliated with or intended to represent your official website, and all logos, trademarks, and brand elements remain your property.</p>
+    <p style="font-size:12px;color:#94a3b8;margin-bottom:16px;text-align:left;line-height:1.6;">This concept is accessible only via this secure page and access code and is not intended for public viewing.</p>
+    <p style="font-size:12px;color:#94a3b8;margin-bottom:20px;text-align:left;line-height:1.6;">If you would prefer that it be removed, it will be taken down immediately and will not be reused for any other business. Please respond to the email requesting this to be removed.</p>
+    <input id="vpc-pass" type="password" placeholder="Access code" style="width:100%;border:2px solid #e2e8f0;border-radius:10px;padding:12px 16px;font-size:14px;text-align:center;margin-bottom:12px;outline:none;" onkeydown="if(event.key==='Enter')document.getElementById('vpc-unlock').click();">
+    <button id="vpc-unlock" onclick="if(document.getElementById('vpc-pass').value==='vpc2026'){document.getElementById('vpc-gate').style.display='none';sessionStorage.setItem('vpc-auth','1');}else{document.getElementById('vpc-pass').style.borderColor='#ef4444';document.getElementById('vpc-err').style.display='block';}" style="width:100%;background:linear-gradient(135deg,#18d26e,#0fa855);color:#fff;border:none;border-radius:10px;padding:12px;font-size:14px;font-weight:600;cursor:pointer;">Unlock Preview</button>
+    <p id="vpc-err" style="display:none;color:#ef4444;font-size:12px;margin-top:8px;">Incorrect access code</p>
+    <p style="font-size:11px;color:#94a3b8;margin-top:16px;">Powered by <a href="https://www.vantagepc.co.za" style="color:#409cc5;text-decoration:none;">Vantage Point Consulting</a></p>
+  </div>
+</div>
+
+
+<!-- Auto-unlock if already authenticated in this session -->
+<script>
+if(sessionStorage.getItem('vpc-auth')==='1'){document.getElementById('vpc-gate').style.display='none';}
+</script>
+
+
+<!-- NAV -->
+<nav id="main-nav" class="fixed top-0 inset-x-0 z-50 px-6 md:px-10 py-5">
+  <div class="max-w-7xl mx-auto flex items-center justify-between">
+    <a href="#hero" class="flex items-center gap-3 group" aria-label="Fraser Heritage Holdings home">
+      <img src="./assets/crest-256.png" alt="Fraser Heritage Holdings crest" class="h-11 w-11 object-contain transition-transform duration-500 group-hover:scale-105">
+      <span class="serif text-cream tracking-[.18em] uppercase text-[.78rem] leading-tight hidden sm:block">Fraser Heritage<br>Holdings</span>
+    </a>
+    <ul class="hidden lg:flex items-center gap-10">
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#philosophy" class="nav-link">Philosophy</a></li>
+      <li><a href="#services" class="nav-link">Services</a></li>
+      <li><a href="#investments" class="nav-link">Investments</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="flex items-center gap-4">
+      <a href="#contact" class="btn-outline hidden md:inline-flex !py-3 !px-6">Begin the Conversation</a>
+      <button id="burger" class="burger lg:hidden flex flex-col gap-[6px] p-2" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div id="mobile-menu" class="fixed inset-0 z-40 bg-ink/98 backdrop-blur-xl flex flex-col items-center justify-center gap-8 lg:hidden" aria-hidden="true">
+  <img src="./assets/crest-256.png" alt="" class="h-20 w-20 object-contain mb-2 opacity-90">
+  <a href="#about" class="nav-link text-xl mobile-link">About</a>
+  <a href="#philosophy" class="nav-link text-xl mobile-link">Philosophy</a>
+  <a href="#services" class="nav-link text-xl mobile-link">Services</a>
+  <a href="#investments" class="nav-link text-xl mobile-link">Investments</a>
+  <a href="#contact" class="nav-link text-xl mobile-link">Contact</a>
+  <a href="#contact" class="btn-primary mt-4 mobile-link">Begin the Conversation</a>
+</div>
+
+<!-- HERO -->
+<section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-28 pb-24">
+  <div class="hero-bg absolute inset-0"></div>
+  <div class="hero-overlay absolute inset-0"></div>
+  <div class="hero-grid absolute inset-0"></div>
+  <div class="hero-fade absolute bottom-0 inset-x-0 h-48"></div>
+
+  <div class="relative z-20 max-w-5xl mx-auto px-6 text-center">
+    <img src="./assets/crest.png" alt="Fraser Heritage Holdings crest" class="crest-glow fade-in mx-auto w-52 md:w-64 lg:w-72 object-contain" width="288" height="288">
+    <p class="eyebrow fade-up d2 mt-6">Je Suis Prest</p>
+    <h1 class="fade-up d3 mt-5 text-4xl sm:text-5xl md:text-6xl lg:text-[4.4rem] leading-[1.08] font-medium text-cream">
+      Preserving Legacy.<br class="hidden sm:block"> Building Generational Wealth.
+    </h1>
+    <p class="fade-up d4 mt-7 max-w-2xl mx-auto text-base md:text-lg text-cream/80 leading-relaxed">
+      Fraser Heritage Holdings is a private family office dedicated to the stewardship of capital, the preservation of heritage, and the creation of enduring value across generations.
+    </p>
+    <div class="fade-up d5 mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+      <a href="#about" class="btn-primary">Discover Our Story <i class="fas fa-arrow-right text-[.7rem]"></i></a>
+      <a href="#contact" class="btn-outline">Get in Touch</a>
+    </div>
+    <div class="fade-up d6 mt-12 flex flex-wrap items-center justify-center gap-3">
+      <span class="glass px-4 py-2 rounded-full text-[.72rem] tracking-[.18em] uppercase text-cream/85"><i class="fas fa-landmark text-gold mr-2"></i>Private Family Office</span>
+      <span class="glass px-4 py-2 rounded-full text-[.72rem] tracking-[.18em] uppercase text-cream/85"><i class="fas fa-globe text-gold mr-2"></i>5 Global Offices</span>
+      <span class="glass px-4 py-2 rounded-full text-[.72rem] tracking-[.18em] uppercase text-cream/85"><i class="fas fa-hourglass-half text-gold mr-2"></i>25+ Years of Heritage</span>
+    </div>
+  </div>
+
+  <a href="#about" class="scroll-cue absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-3 text-[.62rem] tracking-[.35em] uppercase text-gold-soft/80 hover:text-gold transition" aria-label="Scroll to About">
+    <span>Scroll</span><span class="scroll-line"></span>
+  </a>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="relative py-24 md:py-32 bg-ink overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 md:px-10">
+    <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+      <div class="lg:col-span-5 reveal">
+        <div class="relative">
+          <div class="absolute -inset-3 border border-gold-soft/25 translate-x-4 translate-y-4"></div>
+          <div class="relative overflow-hidden">
+            <img src="./assets/estate.jpg" alt="Aerial view of a grand estate mansion surrounded by autumn foliage and manicured grounds" class="w-full h-[420px] lg:h-[560px] object-cover transition-transform duration-[1400ms] hover:scale-105" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-ink/80 via-transparent to-transparent"></div>
+            <div class="absolute bottom-6 left-6 right-6 glass p-5">
+              <p class="serif italic text-lg text-cream leading-snug">“Family legacies are built by thinking in generations, not in quarters.”</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="lg:col-span-7">
+        <div class="section-badge reveal"><i class="fas fa-shield-halved text-[.65rem]"></i> About Us</div>
+        <h2 class="reveal reveal-delay-1 mt-6 text-4xl md:text-5xl lg:text-[3.4rem] leading-[1.1] font-medium text-cream">A Legacy of Discipline &amp; Long-Term Thinking</h2>
+        <div class="accent-divider mt-6 reveal reveal-delay-1"></div>
+        <p class="reveal reveal-delay-2 mt-7 text-cream/80 leading-relaxed text-[1.02rem]">Fraser Heritage Holdings was founded on the belief that exceptional families can achieve more together than alone. We operate as a private investment office, combining deep expertise in alternative assets with sophisticated portfolio construction and family office services.</p>
+        <p class="reveal reveal-delay-3 mt-5 text-cream/80 leading-relaxed text-[1.02rem]">Our approach draws on Endowment and All-Weather principles — deeply diversified and carefully constructed to compound through cycles, not just survive them. We invest alongside our partners, applying the same rigor to every allocation.</p>
+        <ul class="reveal reveal-delay-3 mt-8 grid sm:grid-cols-2 gap-3 text-sm text-cream/85">
+          <li class="flex items-start gap-3"><i class="fas fa-check text-gold mt-1 text-xs"></i>Private investment office for exceptional families</li>
+          <li class="flex items-start gap-3"><i class="fas fa-check text-gold mt-1 text-xs"></i>Deep expertise in alternative assets</li>
+          <li class="flex items-start gap-3"><i class="fas fa-check text-gold mt-1 text-xs"></i>Endowment and All-Weather portfolio construction</li>
+          <li class="flex items-start gap-3"><i class="fas fa-check text-gold mt-1 text-xs"></i>We invest alongside our partners</li>
+        </ul>
+        <a href="#philosophy" class="reveal reveal-delay-4 btn-outline mt-10">Our Philosophy <i class="fas fa-arrow-down text-[.7rem]"></i></a>
+      </div>
+    </div>
+
+    <!-- Stats -->
+    <div class="mt-20 md:mt-28 grid grid-cols-2 lg:grid-cols-4 gap-y-10 border-y border-gold-soft/15 py-12">
+      <div class="reveal text-center px-4"><div class="num">25<span class="text-gold-soft">+</span></div><p class="mt-3 text-[.7rem] tracking-[.28em] uppercase text-stone-light">Years of Heritage</p></div>
+      <div class="reveal reveal-delay-1 text-center px-4 lg:stat-sep"><div class="num">£2.4B</div><p class="mt-3 text-[.7rem] tracking-[.28em] uppercase text-stone-light">Assets Under Management</p></div>
+      <div class="reveal reveal-delay-2 text-center px-4 lg:stat-sep"><div class="num">3</div><p class="mt-3 text-[.7rem] tracking-[.28em] uppercase text-stone-light">Family Partners</p></div>
+      <div class="reveal reveal-delay-3 text-center px-4 lg:stat-sep"><div class="num">5</div><p class="mt-3 text-[.7rem] tracking-[.28em] uppercase text-stone-light">Global Offices</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PHILOSOPHY -->
+<section id="philosophy" class="relative py-24 md:py-32 bg-ink-800 overflow-hidden">
+  <div class="absolute inset-0 hero-grid opacity-60"></div>
+  <div class="relative max-w-7xl mx-auto px-6 md:px-10">
+    <div class="max-w-3xl mx-auto text-center">
+      <div class="section-badge reveal"><i class="fas fa-compass text-[.65rem]"></i> Our Philosophy</div>
+      <h2 class="reveal reveal-delay-1 mt-6 text-4xl md:text-5xl leading-[1.1] font-medium text-cream">Principles That Guide Every Decision</h2>
+      <div class="accent-divider mx-auto mt-6 reveal reveal-delay-1"></div>
+      <p class="reveal reveal-delay-2 mt-6 text-cream/75 leading-relaxed">Our investment philosophy is rooted in patience, discipline, and a commitment to preserving capital while seeking asymmetric opportunities.</p>
+    </div>
+
+    <div class="mt-16 grid md:grid-cols-3 gap-6">
+      <div class="card reveal p-9">
+        <div class="icon w-14 h-14 flex items-center justify-center border border-gold-soft/35 text-gold text-xl"><i class="fas fa-hourglass-half"></i></div>
+        <h3 class="mt-7 text-2xl font-medium text-cream">Long-Term Alignment</h3>
+        <p class="mt-4 text-cream/70 leading-relaxed text-[.95rem]">We design partnerships with generational time horizons. Our culture rewards long-term judgment over short-term convenience, ensuring every decision serves the family's enduring interests.</p>
+      </div>
+      <div class="card reveal reveal-delay-1 p-9">
+        <div class="icon w-14 h-14 flex items-center justify-center border border-gold-soft/35 text-gold text-xl"><i class="fas fa-layer-group"></i></div>
+        <h3 class="mt-7 text-2xl font-medium text-cream">Deep Diversification</h3>
+        <p class="mt-4 text-cream/70 leading-relaxed text-[.95rem]">Our portfolios draw on Endowment and All-Weather principles — carefully constructed to compound through market cycles, not merely survive them. True resilience comes from thoughtful construction.</p>
+      </div>
+      <div class="card reveal reveal-delay-2 p-9">
+        <div class="icon w-14 h-14 flex items-center justify-center border border-gold-soft/35 text-gold text-xl"><i class="fas fa-handshake"></i></div>
+        <h3 class="mt-7 text-2xl font-medium text-cream">Co-Investment</h3>
+        <p class="mt-4 text-cream/70 leading-relaxed text-[.95rem]">Investing alongside our partners has been a defining principle since inception. We apply the same approach to our own capital that we apply to every family we serve — skin in the game, always.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="relative py-24 md:py-32 bg-ink">
+  <div class="max-w-7xl mx-auto px-6 md:px-10">
+    <div class="grid lg:grid-cols-12 gap-10 items-end">
+      <div class="lg:col-span-7">
+        <div class="section-badge reveal"><i class="fas fa-gem text-[.65rem]"></i> What We Do</div>
+        <h2 class="reveal reveal-delay-1 mt-6 text-4xl md:text-5xl leading-[1.1] font-medium text-cream">Comprehensive Family Office Services</h2>
+        <div class="accent-divider mt-6 reveal reveal-delay-1"></div>
+      </div>
+      <p class="lg:col-span-5 reveal reveal-delay-2 text-cream/70 leading-relaxed lg:pb-2">From portfolio construction to family governance, we bring institutional discipline to the stewardship of private capital.</p>
+    </div>
+
+    <div class="mt-14 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="card reveal p-9 lg:row-span-2 flex flex-col justify-between bg-gradient-to-br from-ink-600 to-ink-800">
+        <div>
+          <div class="icon w-14 h-14 flex items-center justify-center border border-gold-soft/35 text-gold text-xl"><i class="fas fa-chart-line"></i></div>
+          <h3 class="mt-7 text-2xl font-medium text-cream">Investment Advisory &amp; Portfolio Construction</h3>
+          <p class="mt-4 text-cream/70 leading-relaxed text-[.95rem]">Endowment-style portfolio construction across public and private markets. We build resilient, diversified portfolios designed to preserve and grow wealth across generations.</p>
+        </div>
+        <div class="mt-10 pt-6 border-t border-gold-soft/15 text-[.7rem] tracking-[.25em] uppercase text-gold-soft">Public &amp; Private Markets</div>
+      </div>
+      <div class="card reveal reveal-delay-1 p-9">
+        <div class="icon w-14 h-14 flex items-center justify-center border border-gold-soft/35 text-gold text-xl"><i class="fas fa-diagram-project"></i></div>
+        <h3 class="mt-7 text-2xl font-medium text-cream">Alternative Asset Allocation</h3>
+        <p class="mt-4 text-cream/70 leading-relaxed text-[.95rem]">Access to a curated global network of high-quality fund managers across venture capital, growth equity, private equity, private debt, and real assets.</p>
+      </div>
+      <div class="card reveal reveal-delay-2 p-9">
+        <div class="icon w-14 h-14 flex items-center justify-center border border-gold-soft/35 text-gold text-xl"><i class="fas fa-scale-balanced"></i></div>
+        <h3 class="mt-7 text-2xl font-medium text-cream">Wealth Management &amp; Structuring</h3>
+        <p class="mt-4 text-cream/70 leading-relaxed text-[.95rem]">Comprehensive wealth structuring, tax optimization, and succession planning. We help families navigate complexity with clarity across generations.</p>
+      </div>
+      <div class="card reveal reveal-delay-1 p-9">
+        <div class="icon w-14 h-14 flex items-center justify-center border border-gold-soft/35 text-gold text-xl"><i class="fas fa-people-roof"></i></div>
+        <h3 class="mt-7 text-2xl font-medium text-cream">Family Governance &amp; Education</h3>
+        <p class="mt-4 text-cream/70 leading-relaxed text-[.95rem]">Building the frameworks, culture, and knowledge that enable families to thrive together. From next-generation education to family council facilitation.</p>
+      </div>
+      <div class="card reveal reveal-delay-2 p-9">
+        <div class="icon w-14 h-14 flex items-center justify-center border border-gold-soft/35 text-gold text-xl"><i class="fas fa-key"></i></div>
+        <h3 class="mt-7 text-2xl font-medium text-cream">Direct Investment &amp; Co-Investment</h3>
+        <p class="mt-4 text-cream/70 leading-relaxed text-[.95rem]">Proprietary deal flow and co-investment opportunities alongside world-class managers, providing access typically reserved for the largest institutional investors.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INVESTMENTS (cream) -->
+<section id="investments" class="relative py-24 md:py-32 bg-cream text-ink">
+  <div class="max-w-7xl mx-auto px-6 md:px-10">
+    <div class="max-w-3xl">
+      <div class="section-badge on-cream reveal"><i class="fas fa-coins text-[.65rem]"></i> Investment Focus</div>
+      <h2 class="reveal reveal-delay-1 mt-6 text-4xl md:text-5xl leading-[1.1] font-medium text-ink">Where We Deploy Capital</h2>
+      <div class="accent-divider on-cream mt-6 reveal reveal-delay-1"></div>
+      <p class="reveal reveal-delay-2 mt-6 text-ink/70 leading-relaxed">We allocate across a diversified set of asset classes, seeking asymmetric returns with an emphasis on capital preservation.</p>
+    </div>
+
+    <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div class="tile reveal p-7"><div class="glyph text-2xl"><i class="fas fa-building"></i></div><h4 class="mt-6 text-2xl font-medium">Private Equity</h4><p class="mt-1 text-[.72rem] tracking-[.22em] uppercase text-ink/55">Buyout &amp; Growth</p></div>
+      <div class="tile reveal reveal-delay-1 p-7"><div class="glyph text-2xl"><i class="fas fa-seedling"></i></div><h4 class="mt-6 text-2xl font-medium">Venture Capital</h4><p class="mt-1 text-[.72rem] tracking-[.22em] uppercase text-ink/55">Early &amp; Growth Stage</p></div>
+      <div class="tile reveal reveal-delay-2 p-7"><div class="glyph text-2xl"><i class="fas fa-city"></i></div><h4 class="mt-6 text-2xl font-medium">Real Assets</h4><p class="mt-1 text-[.72rem] tracking-[.22em] uppercase text-ink/55">Real Estate &amp; Infrastructure</p></div>
+      <div class="tile reveal reveal-delay-3 p-7"><div class="glyph text-2xl"><i class="fas fa-file-invoice-dollar"></i></div><h4 class="mt-6 text-2xl font-medium">Private Debt</h4><p class="mt-1 text-[.72rem] tracking-[.22em] uppercase text-ink/55">Direct Lending</p></div>
+      <div class="tile reveal p-7"><div class="glyph text-2xl"><i class="fas fa-arrow-trend-up"></i></div><h4 class="mt-6 text-2xl font-medium">Public Markets</h4><p class="mt-1 text-[.72rem] tracking-[.22em] uppercase text-ink/55">Equities &amp; Fixed Income</p></div>
+      <div class="tile reveal reveal-delay-1 p-7"><div class="glyph text-2xl"><i class="fas fa-wave-square"></i></div><h4 class="mt-6 text-2xl font-medium">Hedge Funds</h4><p class="mt-1 text-[.72rem] tracking-[.22em] uppercase text-ink/55">Absolute Return</p></div>
+      <div class="tile reveal reveal-delay-2 p-7"><div class="glyph text-2xl"><i class="fas fa-leaf"></i></div><h4 class="mt-6 text-2xl font-medium">Impact Investing</h4><p class="mt-1 text-[.72rem] tracking-[.22em] uppercase text-ink/55">ESG &amp; Sustainability</p></div>
+      <div class="tile reveal reveal-delay-3 p-7"><div class="glyph text-2xl"><i class="fas fa-cubes"></i></div><h4 class="mt-6 text-2xl font-medium">Digital Assets</h4><p class="mt-1 text-[.72rem] tracking-[.22em] uppercase text-ink/55">Strategic Allocation</p></div>
+    </div>
+
+    <div class="mt-14 flex flex-col sm:flex-row items-center justify-between gap-6 border-t border-ink/10 pt-10">
+      <p class="serif italic text-xl text-ink/80 max-w-xl">Seeking asymmetric returns, with capital preservation as the first principle.</p>
+      <a href="#contact" class="btn-outline-dark">Discuss an Allocation <i class="fas fa-arrow-right text-[.7rem]"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- CHARTER QUOTE -->
+<section id="charter" class="relative py-28 md:py-36 overflow-hidden">
+  <div class="hero-bg absolute inset-0 opacity-100"></div>
+  <div class="absolute inset-0 bg-ink/90"></div>
+  <div class="absolute inset-0 hero-grid opacity-50"></div>
+  <div class="relative max-w-4xl mx-auto px-6 text-center">
+    <img src="./assets/crest-256.png" alt="" class="reveal mx-auto w-16 h-16 object-contain opacity-90">
+    <p class="reveal reveal-delay-1 mt-8 serif text-3xl md:text-[2.6rem] leading-[1.25] font-medium text-cream">“Family legacies are built by thinking in generations, not in quarters. We exist to steward capital with the patience, discipline, and foresight that enduring wealth demands.”</p>
+    <p class="reveal reveal-delay-2 mt-8 text-[.72rem] tracking-[.3em] uppercase text-gold-soft">— The Fraser Heritage Holdings Charter</p>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process" class="relative py-24 md:py-32 bg-ink-800">
+  <div class="max-w-7xl mx-auto px-6 md:px-10">
+    <div class="max-w-3xl mx-auto text-center">
+      <div class="section-badge reveal"><i class="fas fa-route text-[.65rem]"></i> How We Work</div>
+      <h2 class="reveal reveal-delay-1 mt-6 text-4xl md:text-5xl leading-[1.1] font-medium text-cream">How a Partnership Begins</h2>
+      <div class="accent-divider mx-auto mt-6 reveal reveal-delay-1"></div>
+      <p class="reveal reveal-delay-2 mt-6 text-cream/75 leading-relaxed">Every relationship starts with a conversation and is built, deliberately, over time.</p>
+    </div>
+    <div class="mt-16 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="card reveal p-8"><span class="step-num">01</span><div class="icon w-12 h-12 flex items-center justify-center border border-gold-soft/35 text-gold"><i class="fas fa-comments"></i></div><h3 class="mt-6 text-2xl font-medium text-cream">Conversation</h3><p class="mt-3 text-cream/70 text-[.93rem] leading-relaxed">An introductory discussion to understand your family, your ambitions and whether our long-term perspective is shared.</p></div>
+      <div class="card reveal reveal-delay-1 p-8"><span class="step-num">02</span><div class="icon w-12 h-12 flex items-center justify-center border border-gold-soft/35 text-gold"><i class="fas fa-magnifying-glass-chart"></i></div><h3 class="mt-6 text-2xl font-medium text-cream">Discovery</h3><p class="mt-3 text-cream/70 text-[.93rem] leading-relaxed">A thorough review of existing structures, holdings and objectives across the generations involved.</p></div>
+      <div class="card reveal reveal-delay-2 p-8"><span class="step-num">03</span><div class="icon w-12 h-12 flex items-center justify-center border border-gold-soft/35 text-gold"><i class="fas fa-drafting-compass"></i></div><h3 class="mt-6 text-2xl font-medium text-cream">Structure</h3><p class="mt-3 text-cream/70 text-[.93rem] leading-relaxed">Portfolio construction, wealth structuring and governance frameworks designed around your family's horizon.</p></div>
+      <div class="card reveal reveal-delay-3 p-8"><span class="step-num">04</span><div class="icon w-12 h-12 flex items-center justify-center border border-gold-soft/35 text-gold"><i class="fas fa-shield-heart"></i></div><h3 class="mt-6 text-2xl font-medium text-cream">Stewardship</h3><p class="mt-3 text-cream/70 text-[.93rem] leading-relaxed">Ongoing, disciplined stewardship — investing alongside you, through cycles, for the generations to come.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- GLOBAL OFFICES -->
+<section id="offices" class="relative py-20 md:py-24 bg-ink border-y border-gold-soft/10">
+  <div class="max-w-7xl mx-auto px-6 md:px-10">
+    <div class="grid lg:grid-cols-12 gap-10 items-center">
+      <div class="lg:col-span-4">
+        <div class="section-badge reveal"><i class="fas fa-earth-europe text-[.65rem]"></i> Global Presence</div>
+        <h2 class="reveal reveal-delay-1 mt-6 text-3xl md:text-4xl leading-[1.15] font-medium text-cream">Headquartered in Aberdeen, present across five cities.</h2>
+      </div>
+      <div class="lg:col-span-8 grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+        <div class="reveal border border-gold-soft/25 bg-ink-700 p-5"><div class="office-dot"></div><h4 class="mt-4 text-xl font-medium text-cream">Aberdeen</h4><p class="text-[.68rem] tracking-[.22em] uppercase text-gold-soft mt-1">Headquarters · UK</p></div>
+        <div class="reveal reveal-delay-1 border border-gold-soft/15 p-5"><div class="office-dot opacity-70"></div><h4 class="mt-4 text-xl font-medium text-cream">New York</h4><p class="text-[.68rem] tracking-[.22em] uppercase text-stone-light mt-1">Americas</p></div>
+        <div class="reveal reveal-delay-2 border border-gold-soft/15 p-5"><div class="office-dot opacity-70"></div><h4 class="mt-4 text-xl font-medium text-cream">Singapore</h4><p class="text-[.68rem] tracking-[.22em] uppercase text-stone-light mt-1">Asia Pacific</p></div>
+        <div class="reveal reveal-delay-3 border border-gold-soft/15 p-5"><div class="office-dot opacity-70"></div><h4 class="mt-4 text-xl font-medium text-cream">Dubai</h4><p class="text-[.68rem] tracking-[.22em] uppercase text-stone-light mt-1">Middle East</p></div>
+        <div class="reveal reveal-delay-4 border border-gold-soft/15 p-5"><div class="office-dot opacity-70"></div><h4 class="mt-4 text-xl font-medium text-cream">Johannesburg</h4><p class="text-[.68rem] tracking-[.22em] uppercase text-stone-light mt-1">Africa</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="relative py-24 md:py-32 bg-ink-800 overflow-hidden">
+  <div class="absolute inset-0 hero-grid opacity-40"></div>
+  <div class="relative max-w-7xl mx-auto px-6 md:px-10">
+    <div class="grid lg:grid-cols-12 gap-12 lg:gap-16">
+      <div class="lg:col-span-5">
+        <div class="section-badge reveal"><i class="fas fa-envelope-open-text text-[.65rem]"></i> Get In Touch</div>
+        <h2 class="reveal reveal-delay-1 mt-6 text-4xl md:text-5xl leading-[1.1] font-medium text-cream">Begin the Conversation</h2>
+        <div class="accent-divider mt-6 reveal reveal-delay-1"></div>
+        <p class="reveal reveal-delay-2 mt-6 serif italic text-xl text-cream/85 leading-snug">We welcome inquiries from families and partners who share our long-term perspective.</p>
+        <p class="reveal reveal-delay-2 mt-5 text-cream/70 leading-relaxed">Whether you are seeking investment partnership, business investment, mergers and acquisitions or simply wish to learn more about our approach, we would be interested to hear from you.</p>
+
+        <div class="reveal reveal-delay-3 mt-10 space-y-6">
+          <a href="mailto:enquiries@fraserhh.com" class="flex items-start gap-4 group">
+            <span class="w-11 h-11 flex items-center justify-center border border-gold-soft/35 text-gold group-hover:bg-gold group-hover:text-ink transition"><i class="fas fa-envelope"></i></span>
+            <span><span class="block text-[.68rem] tracking-[.25em] uppercase text-gold-soft">Email</span><span class="block text-cream text-lg mt-1 group-hover:text-gold transition">enquiries@fraserhh.com</span></span>
+          </a>
+          <div class="flex items-start gap-4">
+            <span class="w-11 h-11 flex items-center justify-center border border-gold-soft/35 text-gold"><i class="fas fa-location-dot"></i></span>
+            <span><span class="block text-[.68rem] tracking-[.25em] uppercase text-gold-soft">Headquarters</span><span class="block text-cream text-lg mt-1">Aberdeen, United Kingdom</span></span>
+          </div>
+          <div class="flex items-start gap-4">
+            <span class="w-11 h-11 flex items-center justify-center border border-gold-soft/35 text-gold"><i class="fas fa-globe"></i></span>
+            <span><span class="block text-[.68rem] tracking-[.25em] uppercase text-gold-soft">Offices</span><span class="block text-cream text-lg mt-1">Aberdeen · New York · Singapore · Dubai · Johannesburg</span></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-7 reveal reveal-delay-2">
+        <div class="card p-8 md:p-10 !transform-none hover:!translate-y-0">
+          <h3 class="text-2xl font-medium text-cream">Send a Message</h3>
+          <p class="mt-2 text-sm text-cream/60">All enquiries are handled in strict confidence.</p>
+          <form id="enquiry-form" class="mt-8 space-y-5" novalidate><div style="position:absolute;left:-9999px;top:-9999px;height:0;width:0;overflow:hidden;"><input type="text" name="website_url_hp" tabindex="-1" autocomplete="off"></div>
+            <div class="grid sm:grid-cols-2 gap-5">
+              <div><label for="f-name" class="label">Full Name</label><input id="f-name" name="name" type="text" class="field" placeholder="Your name" required></div>
+              <div><label for="f-org" class="label">Family / Organisation</label><input id="f-org" name="organisation" type="text" class="field" placeholder="Optional"></div>
+            </div>
+            <div class="grid sm:grid-cols-2 gap-5">
+              <div><label for="f-email" class="label">Email</label><input id="f-email" name="email" type="email" class="field" placeholder="you@example.com" required></div>
+              <div><label for="f-phone" class="label">Phone</label><input id="f-phone" name="phone" type="tel" class="field" placeholder="+44 …"></div>
+            </div>
+            <div>
+              <label for="f-interest" class="label">Nature of Enquiry</label>
+              <select id="f-interest" name="interest" class="field">
+                <option value="Investment partnership">Investment partnership</option>
+                <option value="Business investment">Business investment</option>
+                <option value="Mergers and acquisitions">Mergers &amp; acquisitions</option>
+                <option value="Family office services">Family office services</option>
+                <option value="General enquiry">General enquiry</option>
+              </select>
+            </div>
+            <div><label for="f-msg" class="label">Message</label><textarea id="f-msg" name="message" rows="5" class="field" placeholder="Tell us a little about your family, your objectives and how we might help." required></textarea></div>
+            <div class="flex flex-col sm:flex-row sm:items-center gap-4 pt-2">
+              <div class="vpc-spam-check" style="flex:1 1 220px;"><label for="vpc-spam" class="label">Spam check: what is 9 + 2? *</label><input id="vpc-spam" type="text" inputmode="numeric" name="antispam_answer" required autocomplete="off" placeholder="Your answer" class="field"></div><button type="submit" class="btn-primary justify-center">Send Message <i class="fas fa-paper-plane text-[.7rem]"></i></button>
+              <p id="form-note" class="text-xs text-cream/50">Or email us directly at <a href="mailto:enquiries@fraserhh.com" class="text-gold-soft hover:text-gold underline underline-offset-4">enquiries@fraserhh.com</a></p>
+            </div>
+            <p id="form-status" class="hidden text-sm text-gold mt-2"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="relative bg-ink pt-20 pb-10 border-t border-gold-soft/15">
+  <div class="max-w-7xl mx-auto px-6 md:px-10">
+    <div class="grid md:grid-cols-12 gap-12">
+      <div class="md:col-span-5">
+        <div class="flex items-center gap-4">
+          <img src="./assets/crest-256.png" alt="Fraser Heritage Holdings crest" class="h-16 w-16 object-contain">
+          <div><p class="serif text-cream tracking-[.2em] uppercase text-sm leading-tight">Fraser Heritage<br>Holdings</p><p class="eyebrow !text-[.8rem] !tracking-[.25em] mt-1">Je Suis Prest</p></div>
+        </div>
+        <p class="mt-6 text-cream/65 text-sm leading-relaxed max-w-md">A private family office dedicated to the stewardship of capital, the preservation of heritage, and the creation of enduring value across generations.</p>
+      </div>
+      <div class="md:col-span-3">
+        <h4 class="text-[.7rem] tracking-[.3em] uppercase text-gold-soft font-sans font-medium">Navigate</h4>
+        <ul class="mt-5 space-y-3 text-sm text-cream/75">
+          <li><a href="#about" class="hover:text-gold transition">About</a></li>
+          <li><a href="#philosophy" class="hover:text-gold transition">Philosophy</a></li>
+          <li><a href="#services" class="hover:text-gold transition">Services</a></li>
+          <li><a href="#investments" class="hover:text-gold transition">Investments</a></li>
+          <li><a href="#contact" class="hover:text-gold transition">Contact</a></li>
+        </ul>
+      </div>
+      <div class="md:col-span-4">
+        <h4 class="text-[.7rem] tracking-[.3em] uppercase text-gold-soft font-sans font-medium">Contact</h4>
+        <ul class="mt-5 space-y-3 text-sm text-cream/75">
+          <li class="flex items-start gap-3"><i class="fas fa-envelope text-gold mt-1 text-xs"></i><a href="mailto:enquiries@fraserhh.com" class="hover:text-gold transition">enquiries@fraserhh.com</a></li>
+          <li class="flex items-start gap-3"><i class="fas fa-location-dot text-gold mt-1 text-xs"></i>Aberdeen, United Kingdom</li>
+          <li class="flex items-start gap-3"><i class="fas fa-globe text-gold mt-1 text-xs"></i>Aberdeen · New York · Singapore · Dubai · Johannesburg</li>
+        </ul>
+      </div>
+    </div>
+    <div class="rule-gold mt-14"></div>
+    <div class="mt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-cream/50">
+      <p>© 2026 Fraser Heritage Holdings. All rights reserved.</p>
+      <p>Website by <a href="https://vantagepc.co.za" target="_blank" rel="noopener" class="text-gold-soft hover:text-gold transition">Vantage Point Consulting</a></p>
+    </div>
+  </div>
+</footer>
+
+<!-- Scroll to top -->
+<button id="to-top" class="fixed bottom-6 left-6 z-40 w-11 h-11 border border-gold-soft/50 bg-ink/90 text-gold hover:bg-gold hover:text-ink transition" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+<script>
+(function(){
+  // Nav state
+  var nav=document.getElementById('main-nav'), toTop=document.getElementById('to-top');
+  function onScroll(){ var y=window.scrollY||0; nav.classList.toggle('scrolled', y>40); toTop.classList.toggle('show', y>600); }
+  window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+  toTop.addEventListener('click', function(){ window.scrollTo({top:0, behavior:'smooth'}); });
+
+  // Mobile menu
+  var burger=document.getElementById('burger'), menu=document.getElementById('mobile-menu');
+  function setMenu(open){ burger.classList.toggle('open', open); menu.classList.toggle('open', open); burger.setAttribute('aria-expanded', open); menu.setAttribute('aria-hidden', !open); document.body.style.overflow=open?'hidden':''; }
+  burger.addEventListener('click', function(){ setMenu(!menu.classList.contains('open')); });
+  menu.querySelectorAll('.mobile-link').forEach(function(a){ a.addEventListener('click', function(){ setMenu(false); }); });
+
+  // Scroll reveal
+  var io=new IntersectionObserver(function(entries){ entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }); },{threshold:.12, rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+
+  // Card spotlight follows cursor
+  document.querySelectorAll('.card').forEach(function(c){ c.addEventListener('mousemove', function(e){ var r=c.getBoundingClientRect(); c.style.setProperty('--mx', (e.clientX-r.left)+'px'); c.style.setProperty('--my', (e.clientY-r.top)+'px'); }); });
+
+  // Enquiry form: composes an email to the office (no third-party form service)
+  var form=document.getElementById('enquiry-form'), status=document.getElementById('form-status');
+  if(form){ form.addEventListener('submit', function(ev){
+    ev.preventDefault();
+    var f=form.elements, missing=[];
+    ['name','email','message'].forEach(function(k){ if(!f[k].value.trim()){ missing.push(k); f[k].style.borderColor='#ef4444'; } else { f[k].style.borderColor=''; } });
+    if(missing.length){ status.textContent='Please complete your name, email and message.'; status.classList.remove('hidden'); return; }
+    if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(f.email.value)){ status.textContent='Please enter a valid email address.'; status.classList.remove('hidden'); f.email.style.borderColor='#ef4444'; return; }
+    var subject='Enquiry: '+f.interest.value+' — '+f.name.value;
+    var body='Name: '+f.name.value+'\nOrganisation: '+(f.organisation.value||'-')+'\nEmail: '+f.email.value+'\nPhone: '+(f.phone.value||'-')+'\nNature of enquiry: '+f.interest.value+'\n\n'+f.message.value;
+    window.location.href='mailto:enquiries@fraserhh.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
+    status.textContent='Thank you. Your email client has been opened with your message addressed to enquiries@fraserhh.com.'; status.classList.remove('hidden');
+  }); }
+})();
+</script>
+<style>#main-nav:not(.scrolled){background:rgba(10,10,10,0.88);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);}</style>
+
+<script>
+(function(){
+  var _lt=Date.now();
+  var _ans=11;
+  document.querySelectorAll('form').forEach(function(f){
+    f.addEventListener('submit',function(e){
+      var hp=f.querySelector('[name="website_url_hp"]');
+      if(hp&&hp.value){e.preventDefault();return false;}
+      if(Date.now()-_lt<3000){e.preventDefault();alert('Please wait a moment before submitting.');return false;}
+      var ma=f.querySelector('[name="antispam_answer"]');
+      if(ma&&parseInt(ma.value)!==_ans){e.preventDefault();alert('Incorrect answer. Please try again.');ma.focus();return false;}
+    });
+  });
+})();
+</script>
+
+<!-- Chatbot Widget -->
+<style>
+  #chatbot-btn { position:fixed; bottom:24px; right:24px; width:62px; height:62px; border-radius:50%; overflow:hidden; padding:0; display:flex; align-items:center; justify-content:center; background:#0a0a0a; color:#fff; border:2px solid #c9a961; cursor:pointer; box-shadow:0 4px 18px rgba(0,0,0,0.30); font-size:26px; z-index:1000; transition:all 0.3s; }
+  #chatbot-btn-logo { width:78%; height:78%; object-fit:contain; display:block; }
+  #chatbot-label { position:fixed; bottom:98px; right:24px; background:#c9a961; color:#111111; font-weight:700; font-size:13px; padding:8px 16px; border-radius:20px; cursor:pointer; z-index:1000; box-shadow:0 4px 14px rgba(0,0,0,0.28); white-space:nowrap; font-family:inherit; }
+  #chatbot-btn:hover { transform:scale(1.1); box-shadow:0 6px 25px rgba(0,0,0,0.3); }
+  #chatbot-window { position:fixed; bottom:100px; right:12px; width:min(360px,calc(100vw - 24px)); max-height:min(480px,calc(100vh - 140px)); background:#fff; border-radius:16px; box-shadow:0 10px 40px rgba(0,0,0,0.15); z-index:1000; display:none; flex-direction:column; overflow:hidden; border:1px solid #e2e8f0; }
+  #chatbot-window.open { display:flex; }
+  #chat-header { background:#0a0a0a; color:#fff; padding:16px 16px 12px; }
+  #chat-header h3 { margin:0; font-size:15px; font-weight:700; color:#fff; font-family:inherit; }
+  #chat-header p { margin:3px 0 0; font-size:11px; color:rgba(255,255,255,0.85); }
+  #chat-header .status { display:inline-block; width:8px; height:8px; background:#4ade80; border-radius:50%; margin-right:6px; }
+  #chat-messages { flex:1; overflow-y:auto; padding:14px; min-height:160px; max-height:260px; }
+  .chat-msg { max-width:82%; padding:10px 14px; border-radius:14px; margin-bottom:8px; font-size:13px; line-height:1.5; }
+  .chat-bot { background:#f1f5f9; color:#334155; border-bottom-left-radius:4px; }
+  .chat-user { background:#c9a961; color:#0a0a0a; margin-left:auto; border-bottom-right-radius:4px; }
+  .chat-typing { background:#f1f5f9; color:#94a3b8; border-bottom-left-radius:4px; font-style:italic; }
+  #chat-quick { border-top:1px solid #f1f5f9; padding:8px 14px; display:flex; flex-wrap:wrap; gap:4px; }
+  .chat-chip { padding:5px 10px; border:1px solid #e2e8f0; background:#fff; color:#475569; border-radius:20px; cursor:pointer; font-size:11px; transition:all 0.2s; white-space:nowrap; }
+  .chat-chip:hover { background:#c9a961; color:#0a0a0a; border-color:#c9a961; }
+  #chat-input-row { display:flex; border-top:1px solid #e2e8f0; }
+  #chat-input { flex:1; border:none; padding:12px 14px; font-size:13px; outline:none; color:#0f172a; background:#fff; caret-color:#0f172a; }
+  #chat-input::placeholder { color:#94a3b8; }
+  #chat-send { background:#c9a961; color:#0a0a0a; border:none; padding:12px 16px; cursor:pointer; font-size:14px; }
+  #chat-send:hover { opacity:0.9; }
+
+  /* --- floating widget stack (standard across all builds) --- */
+  #scrollTop, #scroll-top, .scroll-top, #backToTop, #back-to-top, .back-to-top { bottom:148px !important; right:24px !important; z-index:999 !important; }
+  @media (max-width:640px) {
+    #scrollTop, #scroll-top, .scroll-top, #backToTop, #back-to-top, .back-to-top { bottom:144px !important; right:18px !important; }
+  }
+  /* stand down while the chat panel or a full-screen drawer is open */
+  body.chat-open #scrollTop, body.chat-open #scroll-top, body.chat-open .scroll-top, body.chat-open #backToTop, body.chat-open #back-to-top, body.chat-open .back-to-top
+  { opacity:0 !important; visibility:hidden !important; pointer-events:none !important; }
+  body.overlay-open #scrollTop, body.overlay-open #scroll-top, body.overlay-open .scroll-top, body.overlay-open #backToTop, body.overlay-open #back-to-top, body.overlay-open .back-to-top,
+  body.overlay-open #chatbot-btn, body.overlay-open #chatbot-label, body.overlay-open #chatbot-window
+  { opacity:0 !important; visibility:hidden !important; pointer-events:none !important; }
+</style>
+
+<div id="chatbot-label" onclick="toggleChat()">Chat to us 👋</div><button id="chatbot-btn" onclick="toggleChat()" aria-label="Chat with Fraser Heritage Holdings"><img id="chatbot-btn-logo" src="./assets/crest-256.png" alt="Fraser Heritage Holdings"><span id="chatbot-btn-close" style="display:none;font-size:24px;line-height:1;color:#c9a961;">✕</span></button>
+<div id="chatbot-window">
+  <div id="chat-header">
+    <h3><span class="status"></span>Fraser Heritage Holdings</h3>
+    <p>Usually replies instantly</p>
+  </div>
+  <div id="chat-messages">
+    <div class="chat-msg chat-bot">Hi! 👋 Welcome to Fraser Heritage Holdings — ask me about our services, investment focus, or how to reach the team — or type your own question below.</div>
+  </div>
+  <div id="chat-quick">
+    <button class="chat-chip" onclick="askChip('Who are you?')">Who are you?</button>
+    <button class="chat-chip" onclick="askChip('What services do you offer?')">Services</button>
+    <button class="chat-chip" onclick="askChip('Where are you based?')">Where are you based?</button>
+    <button class="chat-chip" onclick="askChip('How do I contact you?')">Contact</button>
+  </div>
+  <div id="chat-input-row">
+    <input id="chat-input" type="text" placeholder="Type your question..." onkeydown="if(event.key==='Enter')sendMsg()">
+    <button id="chat-send" onclick="sendMsg()">➤</button>
+  </div>
+</div>
+
+<script>
+var chatKB = [{"keywords": ["who", "about", "company", "tell me about"], "answer": "We're Fraser Heritage Holdings! Fraser Heritage Holdings is a private family office dedicated to the stewardship of capital, the preservation of heritage, and the creation of enduring value across generations. It operates as a private investment office combining deep expertise in alternative assets with sophisticated portfolio construction and family office services."}, {"keywords": ["hello", "hi", "hey", "good morning", "good afternoon"], "answer": "Hello! Welcome to Fraser Heritage Holdings. How can I help you today?"}, {"keywords": ["thank", "thanks", "cheers", "appreciate"], "answer": "You're welcome! Is there anything else I can help you with?"}, {"keywords": ["bye", "goodbye", "later", "that's all"], "answer": "Thanks for chatting! Don't hesitate to reach out if you need anything. Have a great day!"}, {"keywords": ["service", "offer", "do you", "what do", "provide", "help with"], "answer": "We offer: Investment Advisory & Portfolio Construction, Alternative Asset Allocation, Wealth Management & Structuring, Family Governance & Education, Direct Investment & Co-Investment. Would you like details on any specific service?"}, {"keywords": ["investment", "advisory", "portfolio", "construction"], "answer": "Investment Advisory & Portfolio Construction: Endowment-style portfolio construction across public and private markets."}, {"keywords": ["alternative", "asset", "allocation"], "answer": "Alternative Asset Allocation: Curated global network of fund managers across venture capital, growth equity, private equity, private debt and real assets."}, {"keywords": ["wealth", "management", "structuring"], "answer": "Wealth Management & Structuring: Wealth structuring, tax optimization and succession planning."}, {"keywords": ["family", "governance", "education"], "answer": "Family Governance & Education: Frameworks, culture and knowledge that enable families to thrive together; next-generation education and family council facilitation."}, {"keywords": ["direct", "investment", "co-investment"], "answer": "Direct Investment & Co-Investment: Proprietary deal flow and co-investment opportunities alongside world-class managers."}, {"keywords": ["contact", "phone", "call", "email", "reach", "number", "address", "location", "where"], "answer": "Here's how to reach us:<br>\u2709\ufe0f <a href=\"mailto:enquiries@fraserhh.com\" style=\"color:#c9a961;text-decoration:underline\">enquiries@fraserhh.com</a><br>\ud83d\udccd Aberdeen, United Kingdom (HQ) \u00b7 New York \u00b7 Singapore \u00b7 Dubai \u00b7 Johannesburg"}, {"keywords": ["price", "cost", "quote", "how much", "fee", "rate", "charge", "afford"], "answer": "We'd be happy to provide a free quote!  or email <a href=\"mailto:enquiries@fraserhh.com\" style=\"color:#c9a961;text-decoration:underline\">enquiries@fraserhh.com</a>, or fill out the contact form on this page."}, {"keywords": ["emergency", "urgent", "asap", "now", "immediately", "today"], "answer": "For urgent matters, please use the contact form on this page."}];
+
+function toggleChat(){
+  var w=document.getElementById('chatbot-window');
+  w.classList.toggle('open');
+  var _o=w.classList.contains('open');var _lg=document.getElementById('chatbot-btn-logo');if(_lg)_lg.style.display=_o?'none':'block';document.getElementById('chatbot-btn-close').style.display=_o?'block':'none';document.getElementById('chatbot-label').style.display=_o?'none':'block';document.body.classList.toggle('chat-open',_o);
+  if(w.classList.contains('open'))document.getElementById('chat-input').focus();
+}
+
+function addMsg(from,text){
+  var m=document.getElementById('chat-messages');
+  var d=document.createElement('div');
+  d.className='chat-msg '+(from==='user'?'chat-user':'chat-bot');
+  if(from==='user'){ d.textContent=text; }
+  else { d.innerHTML=text; }
+  m.appendChild(d);
+  m.scrollTop=m.scrollHeight;
+}
+
+function showTyping(){
+  var m=document.getElementById('chat-messages');
+  var d=document.createElement('div');
+  d.className='chat-msg chat-typing';
+  d.id='typing';
+  d.textContent='Typing...';
+  m.appendChild(d);
+  m.scrollTop=m.scrollHeight;
+}
+
+function hideTyping(){
+  var t=document.getElementById('typing');
+  if(t)t.remove();
+}
+
+function findAnswer(q){
+  var ql=q.toLowerCase().split(/\s+/);
+  var best=null, bestScore=0;
+  for(var i=0;i<chatKB.length;i++){
+    var score=0;
+    var keys=chatKB[i].keywords;
+    for(var j=0;j<keys.length;j++){
+      for(var w=0;w<ql.length;w++){
+        if(ql[w]===keys[j] || ql[w].indexOf(keys[j])!==-1) score+=2;
+      }
+    }
+    if(score>bestScore){ bestScore=score; best=chatKB[i]; }
+  }
+  if(best && bestScore>0) return best.answer;
+  return "That\'s a great question! I might not have the full details on that, but our team can definitely help. Send us an email at enquiries@fraserhh.com and we\'ll get right back to you.";
+}
+
+function sendMsg(){
+  var inp=document.getElementById('chat-input');
+  var q=inp.value.trim();
+  if(!q)return;
+  addMsg('user',q);
+  inp.value='';
+  showTyping();
+  setTimeout(function(){
+    hideTyping();
+    addMsg('bot',findAnswer(q));
+  },800);
+}
+
+function askChip(q){
+  document.getElementById('chat-input').value=q;
+  sendMsg();
+}
+</script>
+
+<script>
+(function(){
+  var b=document.body;
+  var sync=function(){ b.classList.toggle('overlay-open', b.style.overflow==='hidden'); };
+  if (window.MutationObserver) {
+    new MutationObserver(sync).observe(b, {attributes:true, attributeFilter:['style']});
+  }
+  sync();
+})();
+</script>
+
+</body>
+</html>
